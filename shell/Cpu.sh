@@ -33,7 +33,7 @@ Temp=`echo $Temp_num | awk '{printf("%.2f", $1 * 1.0 / 1000)}'`
 Temp_level=`echo $Temp_num | awk '{t = $1 / 1000; if (t >= 0 && t < 50) printf("normal"); else if (t >= 50 && t < 70) printf("note"); else printf("warning");}'`
 
 #输出：时间  负载  cpu占用率  当前cpu温度  cpu温度警报级别
-echo "$Time_now  $Loadavg  $rate  $Temp℃   $Temp_level" >> ./log/Cpu.log
+ echo "$Time_now  $Loadavg  $rate  $Temp℃   $Temp_level" >> ./log/Cpu.log
 
 
 
