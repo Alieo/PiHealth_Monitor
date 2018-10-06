@@ -14,5 +14,5 @@ mem_information=`free -m | tr -s -c "0-9" " " | awk -v a=$1 '{printf("%dM\t%dM\t
 #Dynamic_average=`echo | awk -v a=$1 -v b=$Occupy_now '{printf a * 0.3 + 0.7 * b}'` # 平均值
 
 #输出：时间  内存总量  内存剩余量  当前内存占用量  平均值
-echo -e "$Time_now\t$mem_information" >> ./log/Mem.log
+ echo -e "$Time_now\t$mem_information" >> ./log/Mem.log
 
