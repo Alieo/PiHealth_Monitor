@@ -14,4 +14,4 @@ done
 
 #输出整个磁盘信息
 message0=`df -m | grep "^/dev/" | awk '{a+=$2;b+=$4;c+=$3}END{printf("0\tDisk\t%dM\t%dM\t%d%%\n", a, b, c * 100 / a) }'`
-echo "$Time_now  $message0" >> ./log/Disk.log
+ echo "$Time_now  $message0" >> ./log/Disk.log
