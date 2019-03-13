@@ -1,0 +1,18 @@
+#!/bin/bash
+#功能：在本机将文件统一部署到40~49的pi上，并执行编译运行
+#变量定义
+#用户名
+user="zale"
+
+
+#数组循环赋值
+#将40~49的ip放入arr数组中
+for i in `seq 0 9`;do
+    ip_arr[$i]=192.168.1.4$i
+done
+
+#在pi上执行的命令
+for i in ${ip_arr[@]}; do
+    ssh zale@$i "cd ~/socket;./cgo;./slave"
+done
+
