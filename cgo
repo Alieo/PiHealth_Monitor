@@ -1,4 +1,5 @@
 #!/bin/bash
+#编译线程
 gcc slave.c -o slave -lpthread
 
 
